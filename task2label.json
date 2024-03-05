@@ -1,0 +1,102 @@
+{
+  "tweeteval_emoji": [
+    "_red_heart_",
+    "_smiling_face_with_hearteyes_",
+    "_face_with_tears_of_joy_",
+    "_fire_",
+    "_sparkles_",
+    "_two_hearts_",
+    "_smiling_face_with_sunglasses_",
+    "_camera_with_flash_",
+    "_smiling_face_with_smiling_eyes_",
+    "_camera_",
+    "_Christmas_tree_",
+    "_United_States_",
+    "_blue_heart_",
+    "_face_blowing_a_kiss_",
+    "_winking_face_",
+    "_beaming_face_with_smiling_eyes_",
+    "_sun_",
+    "_winking_face_with_tongue_",
+    "_hundred_points_",
+    "_purple_heart_"
+  ],
+  "tweeteval_emotion": [
+    "anger",
+    "sadness",
+    "joy",
+    "optimism"
+  ],
+  "tweeteval_hate": [
+    "not-hate",
+    "hate"
+  ],
+  "tweeteval_irony": [
+    "non_irony",
+    "irony"
+  ],
+  "tweeteval_offensive": [
+    "not-offensive",
+    "offensive"
+  ],
+  "tweeteval_sentiment": [
+    "neutral",
+    "positive",
+    "negative"
+  ],
+  "tweeteval_stance": [
+    "against",
+    "favor",
+    "none"
+  ],
+  "isear_v3": [
+    "shame",
+    "disgust",
+    "sadness",
+    "anger",
+    "fear",
+    "joy",
+    "guilt"
+  ],
+  "meld": [
+    "neutral",
+    "joy",
+    "anger",
+    "surprise",
+    "sadness",
+    "disgust",
+    "fear"
+  ],
+  "goemotions": [
+    "neutral",
+    "admiration",
+    "gratitude",
+    "approval",
+    "amusement",
+    "annoyance",
+    "disapproval",
+    "love",
+    "curiosity",
+    "anger",
+    "optimism",
+    "confusion",
+    "joy",
+    "sadness",
+    "surprise",
+    "disappointment",
+    "caring",
+    "realization",
+    "disgust",
+    "excitement",
+    "fear",
+    "desire",
+    "remorse",
+    "embarrassment",
+    "nervousness",
+    "relief",
+    "pride",
+    "grief"
+  ],
+  "glue_sts_b": null,
+  "claire_v2": null
+}
