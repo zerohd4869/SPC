@@ -2,13 +2,13 @@
 
 This repository contains the official code for the paper [Structured Probabilistic Coding](https://arxiv.org/abs/2312.13933), accepted at [AAAI 2024 Oral].
 
-## Description
+## Highlights
 
 Structured Probabilistic Coding (SPC) is a supervised representation learning technology serving as an encoder-only probabilistic coding framework with structured regularization from the target space.
 
 By learning compact and informative representations from input related to the target task, SPC enhances the generalization ability of pre-trained language models for better language understanding.
 
-Experimental results on 12 natural language understanding tasks demonstrate that SPC effectively improves the performance of pre-trained language models for classification and regression.
+Experimental results on 12 natural language understanding tasks demonstrate that SPC effectively improves the performance of PLMs for classification and regression.
 
 ## News
 - [TODO]: Release our model chechpoints of SPC.
