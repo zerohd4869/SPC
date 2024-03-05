@@ -35,7 +35,7 @@ pip install -r spc_requirements.txt
 
 3. Run examples
 
-**Apply for classification**
+For classification:
 ```
 # EmotionEval dataset
 nohup bash script/run_train_emotioneval.sh >  spc_roberta_emotioneval.out &
@@ -56,7 +56,7 @@ nohup bash script/run_train_sentieval.sh >  spc_roberta_sentieval.out &
 nohup bash script/run_train_stanceeval.sh >  spc_roberta_stanceeval.out &
 ```
 
-**Apply for regression**
+For regression:
 ```
 # STS-B dataset
 nohup bash script/run_train_sbsb.sh >  spc_roberta_stsb.out &
@@ -74,6 +74,7 @@ Then, refer to the template `/SPC/datasets/new_dataset_script.py` to write the c
 2. Refer to the Quick Start section above to write the corresponding sh script and run it.
 
 **Apply all tasks in a multi-task paradigm**
+
 ```
 # 6 tasks/datasets in TweetEval
 nohup bash script/run_train_mtl_tweeteval.sh >  spc_roberta_mtl_tweeteval.out &
