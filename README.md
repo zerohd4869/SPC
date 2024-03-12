@@ -22,7 +22,7 @@ Experimental results on 12 natural language understanding tasks demonstrate that
 1. Clone the repository
 ```
 git clone https://github.com/zerohd4869/SPC.git
-cd /SPC
+cd ./SPC
 ```
 
 2. Download the data and pre-trained model parameters
