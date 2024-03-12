@@ -1,6 +1,6 @@
 # SPC
 
-This repository contains the official code for the paper [Structured Probabilistic Coding](https://arxiv.org/abs/2312.13933), accepted at [AAAI 2024 Oral].
+This repository contains the official code for AAAI 2024 Oral paper [Structured Probabilistic Coding](https://arxiv.org/abs/2312.13933).
 
 ## Highlights
 
@@ -26,6 +26,7 @@ cd /SPC
 ```
 
 2. Download the data and pre-trained model parameters
+
 Download 12 datasets mentioned in the paper from [here](https://drive.google.com/file/d/161eu3T7XS-DUl57pQUgtvYG6eGBwLM5H/view?usp=sharing), and extract the files into the `/SPC/data/` directory.
 This repo already contains 7 of these datasets by default, so this step is optional.
 
@@ -85,6 +86,7 @@ nohup bash script/run_train_claire.sh >  spc_roberta_claire.out &
 ## Additional Recipes
 
 **Apply for a new task/dataset**
+
 1. Data preparation and loading script. Download the new dataset (take `NewDataset` as an example) and place the unzip files in the `/SPC/data/` directory. Add the label information of this dataset to the dictionary file `SPC/data/task2label.json`.
 Then, refer to the template `/SPC/datasets/new_dataset_script.py` to write the corresponding reading script for the dataset and place the file in the `/SPC/datasets/` directory. Also, add the dataset and task information to the file `SPC/task.py` at the corresponding location.
 
