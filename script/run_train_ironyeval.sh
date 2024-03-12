@@ -9,7 +9,6 @@ VV="a100-2401-st-${model_name}"
 SEED="0 1 2 3 4"
 DATA_PER="1.0"
 LR="5e-5"
-DP="0"
 WARMUP_RATIO=0.1
 BS=128
 EPOCH_NUM=20
@@ -20,9 +19,10 @@ MAX_LEN=128
 # ==============================================================================
 ALL_TASK_NAME="tweeteval_irony"
 task_type="cls"
-L2="0"
 VAR_W="1"
-CLU_W="10"
+CLU_W="0.1"
+L2="0"
+DP="0.2"
 
 for task_name in ${ALL_TASK_NAME[@]}
 do

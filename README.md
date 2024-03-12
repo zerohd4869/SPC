@@ -11,7 +11,7 @@ By learning compact and informative representations from input related to the ta
 Experimental results on 12 natural language understanding tasks demonstrate that SPC effectively improves the performance of PLMs for classification and regression.
 
 ## News
-- [TODO]: Release our model chechpoints of SPC.
+- [TODO]: Release the model chechpoints of SPC.
 - **[Mar 2024]**: Added support for the multi-task version of SPC.
 - **[Feb 2024]**: Code is available on [GitHub](https://github.com/zerohd4869/SPC).
 - **[Dec 2023]**: Paper is available on [arXiv](https://arxiv.org/abs/2312.13933).
@@ -19,13 +19,18 @@ Experimental results on 12 natural language understanding tasks demonstrate that
 
 ## Quick Start
 
-1. Clone the repository and download pre-trained model parameters
+1. Clone the repository
 ```
 git clone https://github.com/zerohd4869/SPC.git
 cd /SPC
 ```
+
+2. Download the data and pre-trained model parameters
+Download 12 datasets mentioned in the paper from [here](https://drive.google.com/file/d/161eu3T7XS-DUl57pQUgtvYG6eGBwLM5H/view?usp=sharing), and extract the files into the `/SPC/data/` directory.
+This repo already contains 7 of these datasets by default, so this step is optional.
+
 Download the `roberta-base` model parameters from [here](https://huggingface.co/FacebookAI/roberta-base) and place them in the `/SPC/ptms/roberta-base/` directory.
-SPC is a backbone-free representation learning method. When using it, You can choose an appropriate backbone model and initialized parameter checkpoints for your task/dataset.
+SPC is a backbone-free representation learning method. When using it, you could choose an appropriate backbone model and initialized parameter checkpoints for your task or dataset.
 
 2. Install dependencies
 ``` 
@@ -37,6 +42,9 @@ pip install -r spc_requirements.txt
 
 For classification:
 ```
+# EmojiEval dataset
+nohup bash script/run_train_emojieval.sh >  spc_roberta_emojieval.out &
+
 # EmotionEval dataset
 nohup bash script/run_train_emotioneval.sh >  spc_roberta_emotioneval.out &
 
@@ -54,6 +62,15 @@ nohup bash script/run_train_sentieval.sh >  spc_roberta_sentieval.out &
 
 # StanceEval dataset
 nohup bash script/run_train_stanceeval.sh >  spc_roberta_stanceeval.out &
+
+# ISEAR dataset
+nohup bash script/run_train_isear.sh >  spc_roberta_isear.out &
+
+# MELD dataset
+nohup bash script/run_train_meld.sh >  spc_roberta_meld.out &
+
+# GoEmotions dataset
+nohup bash script/run_train_goemotions.sh >  spc_roberta_goemotions.out &
 ```
 
 For regression:

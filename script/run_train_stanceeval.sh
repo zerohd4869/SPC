@@ -9,7 +9,6 @@ VV="a100-2401-st-${model_name}"
 SEED="0 1 2 3 4"
 DATA_PER="1.0"
 LR="5e-5"
-DP="0"
 WARMUP_RATIO=0.1
 BS=128
 EPOCH_NUM=20
@@ -20,9 +19,10 @@ MAX_LEN=128
 # ==============================================================================
 ALL_TASK_NAME="tweeteval_stance"
 task_type="cls"
-L2="0.001"
 VAR_W="1"
-CLU_W="0.5"
+CLU_W="0.1"
+L2="0.001"
+DP="0.2"
 
 for task_name in ${ALL_TASK_NAME[@]}
 do
@@ -48,7 +48,6 @@ echo "EXP_NO: ${EXP_NO}"
 echo "OUT_DIR: ${OUT_DIR}"
 echo "LOG_DIR: ${LOG_PATH}/${EXP_NO}.out"
 
-#--normalize_flag \
 python -u ${WORK_DIR}/main.py   \
 --epochs    ${EPOCH_NUM} \
 --patience  ${PASTIENT_NUM} \
@@ -67,6 +66,7 @@ python -u ${WORK_DIR}/main.py   \
 --var_weight    ${var_w} \
 --clu_weight    ${clu_w} \
 --batch_sampling_flag \
+--normalize_flag \
 >> ${LOG_PATH}/${EXP_NO}.out
 done
 done

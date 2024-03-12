@@ -145,7 +145,7 @@ def main():
     parser.add_argument("--dropout", type=float, default=0.2)
     parser.add_argument("--max_length", type=int, default=128)
     parser.add_argument("--pooling_method", type=str, default="cls", help="pooling_method: cls, avg, cnn")
-    parser.add_argument("--pretrained_model_path", type=str, default="/SPC/ptms/roberta-base", help="roberta-base")  # "bert-base-chinese"
+    parser.add_argument("--pretrained_model_path", type=str, default="./ptms/roberta-base", help="roberta-base")  # "bert-base-chinese"
     parser.add_argument("--output_hidden_states_flag", action="store_true", default=False, help="flag of output_hidden_states")
     parser.add_argument("--output_dir", type=str, default="./outputs/demo-v1/")
 
