@@ -19,10 +19,10 @@ MAX_LEN=128
 # ==============================================================================
 ALL_TASK_NAME="isear_v3"
 task_type="cls"
-VAR_W="10"
+VAR_W="0.1"
 CLU_W="0.1"
-L2="0"
-DP="0.2"
+L2="0.001"
+DP="0"
 
 
 for task_name in ${ALL_TASK_NAME[@]}
