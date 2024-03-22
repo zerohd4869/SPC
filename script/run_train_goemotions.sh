@@ -20,7 +20,7 @@ MAX_LEN=128
 ALL_TASK_NAME="goemotions"
 task_type="cls"
 VAR_W="0.001"
-CLU_W="0.01"
+CLU_W="0.001"
 L2="0"
 DP="0.2"
 

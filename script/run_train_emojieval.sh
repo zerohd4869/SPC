@@ -19,8 +19,8 @@ MAX_LEN=128
 # ==============================================================================
 ALL_TASK_NAME="tweeteval_emoji"
 task_type="cls"
-VAR_W="0.01"
-CLU_W="5"
+VAR_W="1"
+CLU_W="10"
 L2="0"
 DP="0"
 
@@ -49,7 +49,7 @@ echo "EXP_NO: ${EXP_NO}"
 echo "OUT_DIR: ${OUT_DIR}"
 echo "LOG_DIR: ${LOG_PATH}/${EXP_NO}.out"
 
-#--normalize_flag \
+
 python -u ${WORK_DIR}/main.py   \
 --epochs    ${EPOCH_NUM} \
 --patience  ${PASTIENT_NUM} \
@@ -68,6 +68,7 @@ python -u ${WORK_DIR}/main.py   \
 --var_weight    ${var_w} \
 --clu_weight    ${clu_w} \
 --batch_sampling_flag \
+--normalize_flag \
 >> ${LOG_PATH}/${EXP_NO}.out
 done
 done
