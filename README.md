@@ -92,13 +92,14 @@ Then, refer to the template `/SPC/datasets/new_dataset_script.py` to write the c
 
 2. Refer to the Quick Start section above to write the corresponding sh script and run it.
 
-During the training process for SPC, the primary hyperparameters for adjustment along with their ranges are as follows:
+During the training process for SPC, the primary hyperparameters for adjustment along with their suggested ranges are as follows:
 ```
-var_weight: [0.001, 0.01, 0.1, 1, 10]
-clu_weight: [0.01, 0.1, 1, 10]
-weight_decay: [0, 0.001, 0.01]
+var_weight (beta): [0.01, 0.1, 1, 10]
+clu_weight (gamma): [0.01, 0.1, 1, 10]
+
+weight_decay: [0, 0.001]
 dropout: [0, 0.2]
-batch_sampling_flag: False, True
+normalize_flag: False, True
 ```
 Other hyperparameters can be adjusted based on experimental conditions and specific task requirements, such as epochs, patience, warmup_ratio, bs, max_length, etc.
 
