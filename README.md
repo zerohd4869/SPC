@@ -11,7 +11,6 @@ By learning compact and informative representations from input related to the ta
 Experimental results on 12 natural language understanding tasks demonstrate that SPC effectively improves the performance of PLMs for classification and regression.
 
 ## News
-- [TODO]: Release the model chechpoints of SPC.
 - **[Mar 2024]**: Added support for the multi-task version of SPC.
 - **[Feb 2024]**: Code is available on [GitHub](https://github.com/zerohd4869/SPC).
 - **[Dec 2023]**: Paper is available on [arXiv](https://arxiv.org/abs/2312.13933).
@@ -27,7 +26,7 @@ cd ./SPC
 
 2. Download the data and pre-trained model parameters
 
-Download 12 datasets mentioned in the paper from [here](https://drive.google.com/file/d/161eu3T7XS-DUl57pQUgtvYG6eGBwLM5H/view?usp=sharing), and extract the files into the `/SPC/data/` directory.
+Download 12 datasets mentioned in the paper from [here](https://drive.google.com/file/d/17Xin3AKF-BCxn1HzKAI4NaOZNYaVesG-/view?usp=sharing), and extract the files into the `/SPC/data/` directory.
 This repo already contains 7 of these datasets by default, so this step is optional.
 
 Download the `roberta-base` model parameters from [here](https://huggingface.co/FacebookAI/roberta-base) and place them in the `/SPC/ptms/roberta-base/` directory.
@@ -116,10 +115,16 @@ nohup bash script/run_train_mtl_tweeteval.sh >  spc_roberta_mtl_tweeteval.out &
 If you are interested in this work and want to use the code in this repo, please **star** this repo and **cite** it as:
 
 ```
-@inproceedings{hu2024structured,
-  title={Structured Probabilistic Coding},
-  author={Dou Hu and Lingwei Wei and Yaxin Liu and Wei Zhou and Songlin Hu},
-  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
-  year={2024}
+@inproceedings{DBLP:conf/aaai/0001WLZH24,
+  author       = {Dou Hu and
+                  Lingwei Wei and
+                  Yaxin Liu and
+                  Wei Zhou and
+                  Songlin Hu},
+  title        = {Structured Probabilistic Coding},
+  booktitle    = {{AAAI}},
+  pages        = {12491--12501},
+  publisher    = {{AAAI} Press},
+  year         = {2024}
 }
 ```

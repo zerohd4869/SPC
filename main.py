@@ -245,7 +245,7 @@ def main():
     for epoch in range(initial_epoch, num_epochs):
         print("epoch: ", epoch)
         if args.batch_sampling_flag:
-            tasks_config = define_tasks_config(datasets_config, dataset_percentage=args.dataset_percentage)
+            tasks_config = define_tasks_config(datasets_config, dataset_percentage=args.dataset_percentage, seed=args.seed)
             task_actions = []
             for task in iter(Task):
                 if task not in datasets_config.keys():

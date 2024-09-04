@@ -97,7 +97,7 @@ def define_dataset_config(fine_tune_task=None, batch_size=64, pair_flag=False):
     return datasets_config
 
 
-def define_tasks_config(datasets_config, dataset_percentage=1.0, cache_dir="./datasets/cache/", class_weights_flag=False):
+def define_tasks_config(datasets_config, dataset_percentage=1.0, cache_dir="./datasets/cache/", class_weights_flag=False, seed=42):
     tasks_config = {}
     for id, (task, task_config) in enumerate(datasets_config.items()):
         print("task: ", task)
@@ -108,6 +108,7 @@ def define_tasks_config(datasets_config, dataset_percentage=1.0, cache_dir="./da
         train_dataset, val_dataset, test_dataset = dataset_dic["train"], dataset_dic["validation"], dataset_dic["test"]
         len_dataset = len(train_dataset)
         print("## dataset_dic.shape: ", dataset_dic.shape)
+        if dataset_percentage < 1: np.random.seed(seed)
         train_dataset = train_dataset.select(
             list(np.random.choice(np.arange(len_dataset), int(len_dataset * dataset_percentage if dataset_percentage <= 1 else dataset_percentage), False)))
         train_loader = torch.utils.data.DataLoader(train_dataset, num_workers=0, batch_size=task_config.batch_size, shuffle=len_dataset > 0)
