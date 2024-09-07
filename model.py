@@ -198,7 +198,7 @@ class SPC_PLM(nn.Module):
                     pred = mu
 
             else:
-                pred = self.task_module[task.value](hidden)
+                pred = self.task_module[task.value](F.relu(hidden))
 
             task_criterion = self.task_criterion if self.task_type != "multi" else self.task_criterion[self.tasks_config[task]['task_type']]
             if type(label) == list:

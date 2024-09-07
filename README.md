@@ -1,6 +1,6 @@
 # SPC
 
-This repository contains the official code for AAAI 2024 Oral paper [Structured Probabilistic Coding](https://arxiv.org/abs/2312.13933).
+This repository contains the official code for AAAI 2024 Oral paper "[Structured Probabilistic Coding](https://ojs.aaai.org/index.php/AAAI/article/view/29142)".
 
 ## Highlights
 
